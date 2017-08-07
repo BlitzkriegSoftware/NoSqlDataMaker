@@ -28,3 +28,32 @@ Example:
     datamaker.console -o "c:\temp\data\" -n 500
 
 This would make 500 records to the folder specified
+
+# Sample JSON Record
+
+filename: `00b241a0-0fe3-4d99-a101-b9f4beb842ec.json`
+
+    {
+    	"MemberId": "00b241a0-0fe3-4d99-a101-b9f4beb842ec",
+    	"NameLast": "Wick",
+    	"NameFirst": "Shawn",
+    	"EMail": "Shawn.Wick@dropzone.com",
+    	"Company": "dropzone.com",
+    	"MemberSince": "1989-10-23T00:00:00",
+    	"Birthday": "1971-02-24T00:00:00",
+    	"Addresses": [{
+    		"Address1": "6682 Saddlewood Drive Center",
+    		"Address2": null,
+    		"City": "Puyallup",
+    		"State": "AZ",
+    		"Zip": "13736",
+    		"Kind": "Mailing"
+    	}],
+    	"Preference": {
+    		"distinctio-0": "Cras distinctio neque arcu purus ipsa sintoccaecati efficitur neque non.",
+    		"dapibus-1": "Suscipit inceptos dignissimos.",
+    		"auctor-2": "Aliquam cursus provident sociis vestibulum facilisis rem facilisis facilisis nullam nobis.",
+    		"voluptas-3": "Aliquet tempus omnis sit tempor fames maiores accusantiumdoloremque fermentum.",
+    		"magnis-4": "Nisi nostra quibusdam ipsum vivamus sequi vivamus massa."
+    	}
+    }

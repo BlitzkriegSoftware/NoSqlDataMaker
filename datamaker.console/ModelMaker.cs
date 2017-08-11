@@ -16,7 +16,7 @@ namespace datamaker.console
         {
             var person = new Models.Person()
             {
-                MemberId = Guid.NewGuid(),
+                _id = Guid.NewGuid(),
                 Birthday = Faker.Date.Birthday(),
                 EMail = Faker.User.Email(),
                 NameLast = Faker.Name.LastName()

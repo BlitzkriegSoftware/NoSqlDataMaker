@@ -63,7 +63,7 @@ namespace datamaker.console
                                                     new Newtonsoft.Json.Converters.StringEnumConverter()
                                                 }
                                             });
-                            var filename = person.MemberId.ToString() + ".json";
+                            var filename = person._id.ToString() + ".json";
                             filename = Path.Combine(outputFolder, filename);
                             File.WriteAllText(filename, json);
                         }

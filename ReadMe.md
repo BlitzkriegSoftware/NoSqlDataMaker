@@ -34,7 +34,7 @@ This would make 500 records to the folder specified
 filename: `00b241a0-0fe3-4d99-a101-b9f4beb842ec.json`
 
     {
-    	"MemberId": "00b241a0-0fe3-4d99-a101-b9f4beb842ec",
+    	"_id": "00b241a0-0fe3-4d99-a101-b9f4beb842ec",
     	"NameLast": "Wick",
     	"NameFirst": "Shawn",
     	"EMail": "Shawn.Wick@dropzone.com",

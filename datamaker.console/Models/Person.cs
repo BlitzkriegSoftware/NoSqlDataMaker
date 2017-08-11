@@ -8,7 +8,10 @@ namespace datamaker.console.Models
 {
     public class Person
     {
-        public Guid MemberId { get; set; }
+        /// <summary>
+        /// Mongo DB is super fussy about this name
+        /// </summary>
+        public Guid _id { get; set; }
         public string NameLast { get; set; }
         public string NameFirst { get; set; }
         public string EMail { get; set; }

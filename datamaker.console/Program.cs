@@ -50,23 +50,53 @@ namespace datamaker.console
                     }
                     else
                     {
+                        List<Models.Person> list = null;
+
                         for (int i = 0; i < options.NumberOfRecords; i++)
                         {
                             Console.Write("{0}..", i);
                             var person = ModelMaker.PersonMake();
-                            var json = JsonConvert.SerializeObject(
-                                            person,
-                                            Newtonsoft.Json.Formatting.None,
-                                            new Newtonsoft.Json.JsonSerializerSettings()
-                                            {
-                                                Converters = new List<Newtonsoft.Json.JsonConverter> {
+                            if (options.AsArray)
+                            {
+                                if (list == null) list = new List<Models.Person>();
+                                list.Add(person);
+                            }
+                            else
+                            {
+                                var json = JsonConvert.SerializeObject(
+                                                person,
+                                                Newtonsoft.Json.Formatting.None,
+                                                new Newtonsoft.Json.JsonSerializerSettings()
+                                                {
+                                                    Converters = new List<Newtonsoft.Json.JsonConverter> {
                                                     new Newtonsoft.Json.Converters.StringEnumConverter()
-                                                }
-                                            });
-                            var filename = person._id.ToString() + ".json";
+                                                    }
+                                                });
+                                var filename = person._id.ToString() + ".json";
+                                filename = Path.Combine(outputFolder, filename);
+                                File.WriteAllText(filename, json);
+                            }
+                        }
+
+                        if (options.AsArray)
+                        {
+                            var filename = options.OutputFilename;
+                            if (string.IsNullOrWhiteSpace(filename)) filename = "datamaker-data.json";
                             filename = Path.Combine(outputFolder, filename);
+
+                            var json = JsonConvert.SerializeObject(
+                                               list,
+                                               Newtonsoft.Json.Formatting.None,
+                                               new Newtonsoft.Json.JsonSerializerSettings()
+                                               {
+                                                   Converters = new List<Newtonsoft.Json.JsonConverter> {
+                                                    new Newtonsoft.Json.Converters.StringEnumConverter()
+                                                   }
+                                               });
+
                             File.WriteAllText(filename, json);
                         }
+
                         Console.WriteLine("Done");
                     }
                 }

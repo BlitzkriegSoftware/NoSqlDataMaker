@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "BlitzkriegSoftware.Data.Maker": {
+      "commandName": "Project",
+      "commandLineArgs": "-o c:\\temp -a "
+    }
+  }
+}

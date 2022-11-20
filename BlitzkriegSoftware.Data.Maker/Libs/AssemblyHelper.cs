@@ -1,31 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace datamaker.console
+namespace BlitzkriegSoftware.Data.Maker.Libs
 {
+    /// <summary>
+    /// Assembly Helper
+    /// </summary>
     public static class AssemblyHelper
     {
         /// <summary>
         /// Make a version string from AssemblyInfo
         /// </summary>
         /// <returns>formatted string</returns>
-        public static string GetVersion()
+        public static string? GetVersion()
         {
-            int mjr = System.Diagnostics.FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).FileMajorPart;
-            int mnr = System.Diagnostics.FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).FileMinorPart;
-            int bld = System.Diagnostics.FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).FileBuildPart;
-            int prv = System.Diagnostics.FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).FilePrivatePart;
-            return mjr + "." + mnr + "." + bld + "." + prv;
+            return Assembly.GetExecutingAssembly()?.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion;
         }
 
         /// <summary>
         /// Gets title from assembly info
         /// </summary>
         /// <returns>title</returns>
-        public static string GetTitle()
+        public static string? GetTitle()
         {
             return System.Diagnostics.FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).ProductName;
         }
@@ -43,7 +43,7 @@ namespace datamaker.console
         /// Get CopyRight
         /// </summary>
         /// <returns></returns>
-        public static string GetCopyright()
+        public static string? GetCopyright()
         {
             return System.Diagnostics.FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).LegalCopyright;
         }

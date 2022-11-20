@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BlitzkriegSoftware.Data.Maker</name>
+    </assembly>
+    <members>
+        <member name="T:BlitzkriegSoftware.Data.Maker.Libs.AssemblyHelper">
+            <summary>
+            Assembly Helper
+            </summary>
+        </member>
+        <member name="M:BlitzkriegSoftware.Data.Maker.Libs.AssemblyHelper.GetVersion">
+            <summary>
+            Make a version string from AssemblyInfo
+            </summary>
+            <returns>formatted string</returns>
+        </member>
+        <member name="M:BlitzkriegSoftware.Data.Maker.Libs.AssemblyHelper.GetTitle">
+            <summary>
+            Gets title from assembly info
+            </summary>
+            <returns>title</returns>
+        </member>
+        <member name="M:BlitzkriegSoftware.Data.Maker.Libs.AssemblyHelper.GetExeName">
+            <summary>
+            Gets the name of the EXE running
+            </summary>
+            <returns>String of name</returns>
+        </member>
+        <member name="M:BlitzkriegSoftware.Data.Maker.Libs.AssemblyHelper.GetCopyright">
+            <summary>
+            Get CopyRight
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BlitzkriegSoftware.Data.Maker.Libs.ModelMaker">
+            <summary>
+            Model Maker
+            </summary>
+        </member>
+        <member name="M:BlitzkriegSoftware.Data.Maker.Libs.ModelMaker.PersonMake">
+            <summary>
+            Make Onen Person
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BlitzkriegSoftware.Data.Maker.Models.Address">
+            <summary>
+            Address
+            </summary>
+        </member>
+        <member name="P:BlitzkriegSoftware.Data.Maker.Models.Address.Address1">
+            <summary>
+            Address Line
+            </summary>
+        </member>
+        <member name="P:BlitzkriegSoftware.Data.Maker.Models.Address.Address2">
+            <summary>
+            Appt, Department, Floor, etc.
+            </summary>
+        </member>
+        <member name="P:BlitzkriegSoftware.Data.Maker.Models.Address.City">
+            <summary>
+            City
+            </summary>
+        </member>
+        <member name="P:BlitzkriegSoftware.Data.Maker.Models.Address.State">
+            <summary>
+            State or Postal Code
+            </summary>
+        </member>
+        <member name="P:BlitzkriegSoftware.Data.Maker.Models.Address.Zip">
+            <summary>
+            Zip Code
+            </summary>
+        </member>
+        <member name="P:BlitzkriegSoftware.Data.Maker.Models.Address.Kind">
+            <summary>
+            Kind: Address
+            </summary>
+        </member>
+        <member name="P:BlitzkriegSoftware.Data.Maker.Models.Address.IsEmpty">
+            <summary>
+            Address is Empty
+            </summary>
+        </member>
+        <member name="T:BlitzkriegSoftware.Data.Maker.Models.AddressKind">
+            <summary>
+            Address Kind
+            </summary>
+        </member>
+        <member name="F:BlitzkriegSoftware.Data.Maker.Models.AddressKind.Mailing">
+            <summary>
+            Mailing (Postal)
+            </summary>
+        </member>
+        <member name="F:BlitzkriegSoftware.Data.Maker.Models.AddressKind.Billing">
+            <summary>
+            Billing (Accts. Receivable)
+            </summary>
+        </member>
+        <member name="F:BlitzkriegSoftware.Data.Maker.Models.AddressKind.Other">
+            <summary>
+            Other
+            </summary>
+        </member>
+        <member name="T:BlitzkriegSoftware.Data.Maker.Models.CommandLineOptions">
+            <summary>
+            Command Line Options
+            </summary>
+        </member>
+        <member name="P:BlitzkriegSoftware.Data.Maker.Models.CommandLineOptions.NumberOfRecords">
+            <summary>
+            Number of Records To Generate
+            </summary>
+        </member>
+        <member name="P:BlitzkriegSoftware.Data.Maker.Models.CommandLineOptions.OutputFolder">
+            <summary>
+            Output Folder
+            </summary>
+        </member>
+        <member name="P:BlitzkriegSoftware.Data.Maker.Models.CommandLineOptions.OutputFilename">
+            <summary>
+            Data File Name
+            </summary>
+        </member>
+        <member name="P:BlitzkriegSoftware.Data.Maker.Models.CommandLineOptions.AsArray">
+            <summary>
+            Return as a json array
+            </summary>
+        </member>
+        <member name="T:BlitzkriegSoftware.Data.Maker.Models.Person">
+            <summary>
+            Model: Person
+            </summary>
+        </member>
+        <member name="P:BlitzkriegSoftware.Data.Maker.Models.Person._id">
+            <summary>
+            Mongo DB is super fussy about this name
+            </summary>
+        </member>
+        <member name="P:BlitzkriegSoftware.Data.Maker.Models.Person.NameLast">
+            <summary>
+            Last
+            </summary>
+        </member>
+        <member name="P:BlitzkriegSoftware.Data.Maker.Models.Person.NameFirst">
+            <summary>
+            First
+            </summary>
+        </member>
+        <member name="P:BlitzkriegSoftware.Data.Maker.Models.Person.EMail">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:BlitzkriegSoftware.Data.Maker.Models.Person.Company">
+            <summary>
+            Company
+            </summary>
+        </member>
+        <member name="P:BlitzkriegSoftware.Data.Maker.Models.Person.MemberSince">
+            <summary>
+            Member Since
+            </summary>
+        </member>
+        <member name="P:BlitzkriegSoftware.Data.Maker.Models.Person.Birthday">
+            <summary>
+            Birthday
+            </summary>
+        </member>
+        <member name="P:BlitzkriegSoftware.Data.Maker.Models.Person.Addresses">
+            <summary>
+            Addresses
+            </summary>
+        </member>
+        <member name="P:BlitzkriegSoftware.Data.Maker.Models.Person.Preference">
+            <summary>
+            Preferences
+            </summary>
+        </member>
+    </members>
+</doc>
